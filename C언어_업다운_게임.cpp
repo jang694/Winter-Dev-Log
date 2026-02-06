@@ -6,15 +6,15 @@
 void main() {
 	srand(time(NULL));
 	int num = rand() % 100 +1;
-	//¼ıÀÚ¸¦ º» »óÅÂ·Î ÇÏ°í½ÍÀ¸¸é printf("¼ıÀÚ : %d\n", num);¸¦ Ãß°¡
+	//ìˆ«ìë¥¼ ë³¸ ìƒíƒœë¡œ í•˜ê³ ì‹¶ìœ¼ë©´ printf("ìˆ«ì : %d\n", num);ë¥¼ ì¶”ê°€
 
-	int answer = 0; //Á¤´ä
-	int chance = 6; //±âÈ¸
+	int answer = 0; //ì •ë‹µ
+	int chance = 6; //ê¸°íšŒ
 	while (chance > 0) {
-		printf("³²Àº ±âÈ¸ : %d\n", chance);
+		printf("ë‚¨ì€ ê¸°íšŒ : %d\n", chance);
 		chance--;
-		printf("¼ıÀÚ¸¦ ¸ÂÇôº¸¼¼¿ä\n");
-		printf("°æ°í! ¼ıÀÚ¸¸ ÀÔ·ÂÇØÁÖ¼¼¿ä!!\n");
+		printf("ìˆ«ìë¥¼ ë§í˜€ë³´ì„¸ìš”\n");
+		printf("ê²½ê³ ! ìˆ«ìë§Œ ì…ë ¥í•´ì£¼ì„¸ìš”!!\n");
 		scanf("%d", &answer);
 
 		if (answer > num) 
@@ -27,17 +27,17 @@ void main() {
 		}
 		else if (answer == num)
 		{
-			printf("Á¤´äÀÔ´Ï´Ù\n");
+			printf("ì •ë‹µì…ë‹ˆë‹¤\n");
 			break;
 		}
 		else
 		{
-			printf("¿À·ùÀÔ´Ï´Ù\n");¤¤
+			printf("ì˜¤ë¥˜ì…ë‹ˆë‹¤\n");ã„´
 		}
 
 		if (chance == 0)
 		{
-			printf("±âÈ¸¸¦ ¸ğµÎ »ç¿ëÇÏ¼Ì½À´Ï´Ù.");
+			printf("ê¸°íšŒë¥¼ ëª¨ë‘ ì‚¬ìš©í•˜ì…¨ìŠµë‹ˆë‹¤.");
 			break;
 		}
 	}
