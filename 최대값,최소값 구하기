@@ -2,7 +2,7 @@
 
 void main() {
 	int a[5] = { 0, };
-	printf("¼ýÀÚ¸¦ 5°³ ÀûÀ¸½Ã¿À>>");
+	printf("ìˆ«ìžë¥¼ 5ê°œ ì ìœ¼ì‹œì˜¤>>");
 	for (int i = 0; i < 5; i++) {
 		scanf("%d", &a[i]);
 		printf("%d ", a[i]);
@@ -20,6 +20,6 @@ void main() {
 		
 		
 	}
-	printf("ÃÖ´ë°ª:%d\n", max);
-	printf("ÃÖ¼Ò:°ª%d\n", min);
+	printf("ìµœëŒ€ê°’:%d\n", max);
+	printf("ìµœì†Œ:ê°’%d\n", min);
 }
