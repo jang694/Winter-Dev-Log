@@ -16,18 +16,18 @@ int div(int a, int b) {
 void main() {
 	int a, b = 0;
 	char c = 0;
-	printf("µÎ Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À_+,-,*,/_ÀÔ·ÂÇÏ½Ã¿À");
+	printf("ë‘ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤_+,-,*,/_ì…ë ¥í•˜ì‹œì˜¤");
 	scanf("%d %d %c", &a, &b, &c);
 	if (c ==  '+') {
-		printf("°á°ú: %d\n", add(a, b));
+		printf("ê²°ê³¼: %d\n", add(a, b));
 	}
 	else if (c == '-') {
-		printf("°á°ú: %d\n", sub(a, b));
+		printf("ê²°ê³¼: %d\n", sub(a, b));
 	}
 	else if (c == '*') {
-		printf("°á°ú: %d\n", mul(a, b));
+		printf("ê²°ê³¼: %d\n", mul(a, b));
 	}
 	else if (c == '/') {
-		printf("°á°ú: %d\n", div(a, b));
+		printf("ê²°ê³¼: %d\n", div(a, b));
 	}
 }
