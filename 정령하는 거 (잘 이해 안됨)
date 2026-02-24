@@ -23,7 +23,7 @@ int main() {
     for (int i = 0; i < SIZE; i++) {
         printf("point[%3d] : (%3d, %3d)\n", i, point[i].x, point[i].y);
     }
-    for (int i = 0; i < SIZE - 1; i++) { //ÀÌÇØ°¡ Àß ¾ÈµÊ
+    for (int i = 0; i < SIZE - 1; i++) { //Ã€ÃŒÃ‡Ã˜Â°Â¡ Ã€ÃŸ Â¾ÃˆÂµÃŠ
         least = i;
         for (int j = i + 1; j < SIZE; j++) {
             if (point[least].x > point[j].x) least = j;
