@@ -2,56 +2,40 @@
 #include <stdlib.h>
 #include <time.h>
 #include <math.h>
-#define SIZE 5
-typedef struct point {
-    int x;
-    int y;
-}POINT;
-
-void input_random_point(POINT* p, int size)
-{
-    srand(time(NULL));
-    for (int i = 0; i < size; i++) {
-        (p + i)->x = rand() % 101;
-        (p + i)->y = rand() % 101;
-    }
-}
-
-void swap_point(POINT* p1, POINT* p2) {
-    POINT temp;
-    temp = *p1;
-    *p1 = *p2;
-    *p2 = temp;
-}
-
-void print_point_array(POINT p[], int size) {
-    for (int i = 0; i < size; i++) {
-        printf("p[%3d] : (%3d, %3d)\n", i, p[i].x, p[i].y);
-    }
-}
-
-void selection_sort_point(POINT* point, int size) {
-    int least;
-    for (int i = 0; i < SIZE - 1; i++) { //이해가 잘 안됨 ->이해 됨
-        least = i;
-        for (int j = i + 1; j < SIZE; j++) {
-            if (point[least].x > point[j].x) least = j;
-            else if (point[least].x == point[j].x && point[least].y > point[j].y) {
-                least = j;
-            }
-            swap_point(&point[i], point + least);
-        }
-    }
+#define SIZE 4
+typedef struct item {
+    char name[20];
+    int price;
+}ITEM;
+void swap(ITEM* a, ITEM* b) {
+    ITEM temp;
+    temp = *a;
+    *a = *b;
+    *b = temp;
 }
 
 int main() {
-    POINT point[SIZE] = { 0 };
-    POINT temp = { 0,0 };
     int least;
-
-    input_random_point(point, SIZE);
-    print_point_array(point, SIZE);
-    printf("after sorting>>>>>>>>>.\n");
-    print_point_array(point, SIZE);
+    ITEM p1[20] = { 0 };
+    printf("최소 4개의 물건 데이터를 넣으세요\n");
+    for (int i = 0; i < SIZE; i++) {
+        scanf("%s %d", p1[i].name, &p1[i].price);
+        
+    }
+    for (int i = 0; i < SIZE; i++) {
+        printf("%s %d\n", p1[i].name, p1[i].price);
+    }
+    for (int i = 0; i < SIZE - 1; i++) {
+        least = i;
+        for (int j = i + 1; j < SIZE; j++) {
+            if (p1[j].price < p1[least].price)
+                least = j;
+        }
+        swap(&p1[i], &p1[least]);
+    }
+    printf("가격이 싼 순서로 정렬 후>>>\n");
+    for (int i = 0; i < SIZE; i++) {
+        printf("%s %d\n", p1[i].name, p1[i].price);
+    }
     return 0;
 }
